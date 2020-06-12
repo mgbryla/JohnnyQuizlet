@@ -1,7 +1,6 @@
 import random as rd
 
-MENU = 'JohnnyQuizlet\n\nWybierz opcję wpisując numer.\n1.Startuj!\n2.Zamknij.' \
-       '\n\nNIE WCISKAJ NIC INNEGO, BO PROGRAM UMRZE'
+MENU = 'JohnnyQuizlet\n\nWybierz opcję wpisując numer.\n1.Startuj!\n2.Zamknij.'
 INNE = 'Wybierz z podanych opcji'
 MENU2 = '1.Dodaj listę.\n2.Pokaż listę.\n3.Usuń listę.\n4.Losuj.\n 5. Wróć'
 
@@ -46,12 +45,12 @@ def pierwsza_strona():
                 else:
                     print(INNE)
                 break
-        elif start != '2':                      # poprzednio ta i następna opcja były zamienione
-            print(INNE)                         # ale przy inpucie innym niż 1 lub 2 printowało INNE w nieskończoność
-            break                               # a break psuł zmienne 'lista' i 'słówka'
-        else:                                   # teraz nie pisze w nieskończoność, za to kończy program
-            print('Do widzenia, do jutra!')     # nie mam pewności czy to postęp czy regres
-            break                               # z pozdrowieniami, typ niepokorny
+        elif start == '2':
+            print('Do widzenia, do jutra!')
+            break
+        else:
+            print(INNE)
+            start = '0'
 
 
 pierwsza_strona()
